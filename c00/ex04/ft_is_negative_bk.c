@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_is_negative_bk.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miyatanimegumi <miyatanimegumi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/13 15:23:54 by mmiyatan          #+#    #+#             */
-/*   Updated: 2020/09/16 00:03:01 by miyatanimeg      ###   ########.fr       */
+/*   Updated: 2020/09/21 17:14:06 by miyatanimeg      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void ft_is_negative(int n)
 	{
 		write(1, &print_n, 1);
 	}
-	else if (n > 0 || n == (int)NULL)
+	else// if (n > 0 || n == (int)NULL)
 	{
 		write(1, &print_p, 1);
 	}

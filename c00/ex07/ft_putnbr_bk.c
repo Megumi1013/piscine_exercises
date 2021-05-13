@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_bk.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miyatanimegumi <miyatanimegumi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/13 15:23:54 by mmiyatan          #+#    #+#             */
-/*   Updated: 2020/09/20 14:37:21 by miyatanimeg      ###   ########.fr       */
+/*   Updated: 2020/09/21 17:53:08 by miyatanimeg      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putnbr(int nbr)
+void ft_putnbr(int nb)
 {
 	char c;
 	int div;
 
-	if (nbr == -2147483648)
+	if (nb == -2147483648)
 	{
 		write (1, "-2147483648", 11);
-		return ;
+		return;
 	}
-	else if (nbr < 0)
+	else if (nb < 0)
 	{
 		write(1, "-", 1);
-		nbr = nbr * (-1);
+		nb = nb * (-1);
 	}
 
-	div = nbr / 10;
+	div = nb　/ 10;//4
 	if(div >= 1)
 		ft_putnbr(div);
 
-	c = '0' + nbr % 10;
+	c = '0' + nb % 10;
 	write(1, &c, 1);
 
 }

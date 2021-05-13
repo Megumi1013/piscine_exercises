@@ -6,45 +6,38 @@
 /*   By: miyatanimegumi <miyatanimegumi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/13 15:23:54 by mmiyatan          #+#    #+#             */
-/*   Updated: 2020/09/19 10:58:50 by miyatanimeg      ###   ########.fr       */
+/*   Updated: 2020/09/20 22:34:57 by miyatanimeg      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_sort_int_tab(int *tab, int size)
+void ft_rev_int_tab(int *tab, int size)
 {
 	int i;
-	int j;
-	int tab2[size];
-	i = 0;
-	j = size - 1;
+	int tmp;
 
-	while (i < size)
+	i = -1;
+	while (++i <= --size)
+	//indexを１っこずつ増やす
+	//sizeは一個ずつ減る
 	{
-	tab2[i]= tab[j];
-	i++:
-	j--;
+		tmp = tab[i];
+		tab[i] = tab[size];
+		tab[size] = tmp;
 	}
-	return(*tab2);
 }
 
 int		main(void)
 {
-	int numbers[9];
-	int *first_pointer;
-	int index;
+	int tab[5] = {0,1,2,3,4};
+	int size =5;
+	int i = 0;
 
-	index = 0;
-	while (index < 9)
+	ft_rev_int_tab(tab, size);
+	while(i < size)
 	{
-		numbers[index] = index + 1;
-		index++;
+		printf("%d",tab[i]);
+		i++;
 	}
-	*first_pointer = &numbers[0];
-	printf("before: ");
-	debug_dump_array(numbers, 9);
-	ft_rev_int_tab(first_pointer, 9);
-	printf("\nafter : ");
-	debug_dump_array(numbers, 9);
 }

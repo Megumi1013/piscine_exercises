@@ -6,7 +6,7 @@
 /*   By: miyatanimegumi <miyatanimegumi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/13 15:23:54 by mmiyatan          #+#    #+#             */
-/*   Updated: 2020/09/17 19:47:59 by miyatanimeg      ###   ########.fr       */
+/*   Updated: 2020/09/20 09:12:49 by miyatanimeg      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_print_comb(void)
 				write(1, &y, 1);
 				write(1, &z, 1);
  			if (x != '7')
-				write(1, ", ", 1);
+				write(1, ", ", 2);
 			z++;
 			}
 		y++;
